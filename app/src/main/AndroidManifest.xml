@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.user.klimr">
+    package="ru.raaas.klimr">
 
     <application
         android:allowBackup="true"
@@ -10,23 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.Main"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".activities.Settings"
             android:label="@string/title_activity_settings"
-            android:parentActivityName="com.example.user.klimr.MainActivity" >
+            android:parentActivityName=".activities.Main">
+
             <!-- Parent activity meta-data to support API level 4+ -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.klimr.MainActivity" />
-
-            ></activity>
+                android:value="ru.raaas.klimr.activities.Main" />
+            >
+        </activity>
     </application>
 
 </manifest>

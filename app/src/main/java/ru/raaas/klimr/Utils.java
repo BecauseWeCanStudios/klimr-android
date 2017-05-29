@@ -1,4 +1,4 @@
-package com.example.user.klimr;
+package ru.raaas.klimr;
 
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;

@@ -1,4 +1,4 @@
-package com.example.user.klimr;
+package ru.raaas.klimr.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ public class Dashboard extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(com.example.user.klimr.R.layout.fragment_dashboard, container, false);
+        View rootView = inflater.inflate(ru.raaas.klimr.R.layout.fragment_dashboard, container, false);
 
         return rootView;
     }

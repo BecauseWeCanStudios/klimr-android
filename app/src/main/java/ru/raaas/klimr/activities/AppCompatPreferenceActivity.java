@@ -1,4 +1,4 @@
-package com.example.user.klimr;
+package ru.raaas.klimr.activities;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

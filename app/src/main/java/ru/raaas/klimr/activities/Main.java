@@ -1,9 +1,7 @@
-package com.example.user.klimr;
+package ru.raaas.klimr.activities;
 
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -21,16 +19,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import com.example.user.klimr.Utils;
+
+import ru.raaas.klimr.R;
+import ru.raaas.klimr.Utils;
+import ru.raaas.klimr.fragments.Dashboard;
+import ru.raaas.klimr.fragments.Group;
+import ru.raaas.klimr.fragments.Teachers;
 
 // TODO Save/load activity state
-// TODO Tint Disasters button red when there are known disasters
+// TODO Tint DisastersActivity button red when there are known disasters
 
-public class MainActivity extends AppCompatActivity
+public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     // navigation drawer title// used to store app title
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.user.klimr.R.layout.activity_main);
+        setContentView(ru.raaas.klimr.R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,7 +58,7 @@ public class MainActivity extends AppCompatActivity
 
         android.app.FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(com.example.user.klimr.R.id.content_frame, new Dashboard()).commit();
+                .replace(ru.raaas.klimr.R.id.content_frame, new Dashboard()).commit();
         setTitle(R.string.klimr);
     }
 
@@ -93,7 +92,7 @@ public class MainActivity extends AppCompatActivity
             fragment = new Teachers();
         } else if (id == R.id.nav_settings) {
             action = true;
-            Intent intent = new Intent(this, SettingsActivity.class);
+            Intent intent = new Intent(this, Settings.class);
             startActivity(intent);
         } else if (id == R.id.nav_feedback) {
             action = true;
@@ -116,7 +115,7 @@ public class MainActivity extends AppCompatActivity
         if (fragment != null) {
             android.app.FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction()
-                    .replace(com.example.user.klimr.R.id.content_frame, fragment).commit();
+                    .replace(ru.raaas.klimr.R.id.content_frame, fragment).commit();
             if (id == R.id.nav_dashboard) {
                 setTitle(R.string.klimr);
             } else {
@@ -127,7 +126,7 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             // error in creating fragment
-            Log.e("MainActivity", "Error in creating fragment");
+            Log.e("Main", "Error in creating fragment");
         }
 
         return true;
@@ -135,7 +134,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(com.example.user.klimr.R.menu.main, menu);
+        getMenuInflater().inflate(ru.raaas.klimr.R.menu.main, menu);
         Utils.tintMenuItemIcons(
                 menu,
                 ContextCompat.getColor(this, R.color.klimr_topMenuTint),
@@ -146,18 +145,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // toggle nav drawer on selecting action bar app icon/title
-        /*if (myDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        // Handle action bar actions click
-        switch (item.getItemId()) {
-            case com.example.user.klimr.R.id.calendar:
-                Toast.makeText(this, "calendar", Toast.LENGTH_SHORT).show();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }*/
         return super.onOptionsItemSelected(item);
     }
 

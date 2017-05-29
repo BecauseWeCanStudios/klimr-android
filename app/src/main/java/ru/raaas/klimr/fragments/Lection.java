@@ -1,4 +1,4 @@
-package com.example.user.klimr;
+package ru.raaas.klimr.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -34,8 +34,8 @@ public class Lection extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(com.example.user.klimr.R.layout.activity_lection, container, false);
-        TextView Teacher = (TextView) rootView.findViewById(com.example.user.klimr.R.id.teacher);
+        View rootView = inflater.inflate(ru.raaas.klimr.R.layout.fragment_lection, container, false);
+        TextView Teacher = (TextView) rootView.findViewById(ru.raaas.klimr.R.id.teacher);
         Teacher.setText("Klenin");
         return rootView;
     }
@@ -51,7 +51,7 @@ public class Lection extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lection);
+        setContentView(R.layout.fragment_lection);
         TextView Teacher = (TextView)findViewById(R.id.teacher);
         Teacher.setText("Klenin");
     }
