@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#778899</color>
+    <color name="colorPrimaryDark">#708090</color>
+    <color name="colorAccent"> #90EE90</color>
+    <color name="klimr.topMenuTint">#FFFFFF</color>
+    <color name="list_background">#839ba7</color>
+    <color name="list_background_pressed">#7a8fa6</color>
+    <color name="drawer_item_color">#fff</color>
+    <color name="list_divider">#a68b96a3</color>
+</resources>
