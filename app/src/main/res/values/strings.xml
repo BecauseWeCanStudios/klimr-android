@@ -11,8 +11,11 @@
     </string-array>
     <string name="open_menu">Open</string>
     <string name="close_menu">Close</string>
+
     <string name="MOCK.name">Безымянный пользователь</string>
     <string name="MOCK.email">unknown@example.com</string>
+    <string name="MOCK.rightnow">Прямо сейчас: Основы современных образовательных технологий и тому подобной ерунды</string>
+
     <string name="klimr">Klimr</string>
     <string name="klimr.dashboard">Dashboard</string>
     <string name="klimr.calendar">Calendar</string>
@@ -103,4 +106,7 @@
     <string name="klimr.feedback_email">brig@raaas.ru</string>
     <string name="klimr.feedback_email_topic">Klimr feedback</string>
     <string name="klimr.feedback_no_email_app">No email app found</string>
+
+    <!-- Disasters -->
+    <string name="klimr.disasters_nothing">Phew, no disasters! For now.</string>
 </resources>

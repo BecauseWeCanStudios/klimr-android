@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#708090</color>
     <color name="colorAccent"> #90EE90</color>
     <color name="klimr.topMenuTint">#FFFFFF</color>
+    <color name="klimr.rightnow_bg">#13CE66</color>
+    <color name="klimr.rightnow_fg">#FFFFFF</color>
     <color name="list_background">#839ba7</color>
     <color name="list_background_pressed">#7a8fa6</color>
     <color name="drawer_item_color">#fff</color>
